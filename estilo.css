@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Quicksand:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to top right, #ffe0ec, #fff3f7);
+  font-family: 'Quicksand', sans-serif;
+  overflow-x: hidden;
+}
+
+.contenedor {
+  text-align: center;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.titulo {
+  font-size: 2.2em;
+  color: #d81b60;
+  font-family: 'Comfortaa', cursive;
+  animation: fadeInDown 1.5s ease;
+}
+
+.frase {
+  font-size: 1.2em;
+  color: #5d1049;
+  margin-top: 20px;
+  animation: fadeIn 2.5s ease;
+}
+
+.boton {
+  margin-top: 25px;
+  background: #f06292;
+  border: none;
+  padding: 15px 25px;
+  color: white;
+  font-size: 1em;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  animation: bounce 2s infinite;
+}
+
+.boton:hover {
+  transform: scale(1.1);
+}
+
+.mensaje-oculto {
+  display: none;
+  margin-top: 30px;
+  animation: aparecer 1s forwards;
+  color: #880e4f;
+  font-size: 1.1em;
+}
+
+.carrusel {
+  margin-top: 20px;
+}
+
+.slide-activa {
+  font-size: 1.1em;
+  animation: fadeInOut 6s linear infinite;
+  color: #6a1b9a;
+  padding: 10px;
+  font-family: 'Comfortaa', cursive;
+}
+
+.imagen-carrusel {
+  width: 80%;
+  max-width: 300px;
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Animaciones de texto */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* 🌸 Flor CSS - animación infinita y más fluida */
+
+.flor-css {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 40px auto;
+}
+  
+.flor-css .petalo {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #f8bbd0;
+    border-radius: 50%;
+    opacity: 0;
+    animation: petaloAnimar 6s infinite;
+}
+  
+.flor-css .centro {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #f06292;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    animation: centroAnimar 6s infinite;
+}
+  
+.flor-css .petalo:nth-child(1) { top: 0; left: 30px; animation-delay: 0s; }
+.flor-css .petalo:nth-child(2) { top: 15px; left: 60px; animation-delay: 0.5s; }
+.flor-css .petalo:nth-child(3) { top: 45px; left: 60px; animation-delay: 1s; }
+.flor-css .petalo:nth-child(4) { top: 60px; left: 30px; animation-delay: 1.5s; }
+.flor-css .petalo:nth-child(5) { top: 45px; left: 0px; animation-delay: 2s; }
+.flor-css .petalo:nth-child(6) { top: 15px; left: 0px; animation-delay: 2.5s; }
+  
+@keyframes petaloAnimar {
+  0%, 90%, 100% { opacity: 0; transform: scale(0); }
+  10%, 80% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes centroAnimar {
+  0%, 90%, 100% { opacity: 0; transform: scale(0); }
+  10%, 80% { opacity: 1; transform: scale(1); }
+}
+
+/* ❤️ Corazón CSS con forma clara y buena posición */
+.corazon-css {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    margin: 20px auto 40px auto;
+    z-index: 0;
+}
+  
+.corazon-shape {
+    position: absolute;
+    width: 100px;
+    height: 90px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+    background: #e91e63;
+    clip-path: path("M50 15 C50 0, 0 0, 0 37.5 C0 75, 50 90, 50 90 C50 90, 100 75, 100 37.5 C100 0, 50 0, 50 15 Z");
+    animation: latidoReal 1.5s infinite ease-in-out;
+}
+  
+@keyframes latidoReal {
+  0%, 100% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.1); }
+}
+
+/* Nuevo mensaje: Feliz Día de las Madres */
+.mensaje-feliz-dia {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 1.5em;
+  color: #c2185b;
+  margin-top: 30px;
+  animation: fadeInDown 2s ease;
+}
+  
+/* Responsive */
+@media (max-width: 500px) {
+  .titulo { font-size: 1.8em; }
+  .frase, .slide-activa { font-size: 1em; }
+  .boton { padding: 12px 20px; font-size: 0.9em; }
+  .imagen-carrusel { width: 100%; }
+}
